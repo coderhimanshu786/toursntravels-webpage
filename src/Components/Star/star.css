@@ -1,0 +1,131 @@
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(281, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
+}
+body {
+  background-color: var(--gradientColor);
+}
+
+
+/* Styles for the flex container */
+.star-rating {
+  display: flex;          
+  flex-direction: row; 
+  align-items: center;   
+  justify-content: center; 
+  padding: 20px; 
+  background-color: rgb(199, 225, 233);         
+}
+
+/* Styles for the rating heading */
+.rating {
+  color: var(--textColor);
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  padding: 0 14px;      
+}
+
+/* Styles for the star icons */
+#fivestar {
+  font-size: 45px;        
+  cursor: pointer; 
+  margin: 0 8px;     
+}
+
+/* Styles for filled stars */
+.star-filled {
+  color: red;  
+}
+
+/* Styles for empty stars */
+.star-empty {
+  color: var(--greyText);            
+}
+
+/* Styles for the submit button */
+#rating-btn {
+  margin: 0 18px;
+  padding: 10px 20px;   
+  background-color: var(--SecondaryColor); 
+  color: white;         
+  border-radius: 4px;     
+  cursor: pointer;  
+  font-size: 1.2rem; 
+  font-weight: 500;    
+}
+
+/* Styles for the Thank You message */
+#thankYouMessage {
+  font-size: 34px;        
+  text-align: center;     
+  background: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: waviy 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-30px);
+  }
+}
+
+
+/* Styles for the smile icon */
+.smile {
+  color: red;
+}
+
+
+ @media only screen and (max-width: 600px){
+  .star-rating{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 24px;
+  }
+  .rating{
+    font-size: 1.6rem;
+    padding: 0 12px;
+    color: var(--blackColor);
+  }
+  #rating-btn{
+    margin-top: 20px;
+    color: var(--whiteColor);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-left: 18px;
+  }
+  span{
+    font-size: 43px;
+  }
+} 
